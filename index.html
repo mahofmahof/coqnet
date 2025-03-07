@@ -1,27 +1,34 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Coqnet Validator Haritası</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <style>
-    #map { height: 600px; }
-  </style>
-</head>
-<body>
-  <div id="map"></div>
-  <script>
-    // Haritayı başlat
-    var map = L.map('map').setView([0, 0], 2); // Dünya geneli görünüm
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
-
-    // Validator lokasyonlarını ekle
-    L.marker([35.6895, 139.6917]).addTo(map)
-      .bindPopup("NodeID-zB5oHsgkX7u1DEKRceJPgpS9phDYQoYQ");
-    L.marker([40.7128, -74.0060]).addTo(map)
-      .bindPopup("NodeID-7Xhw2mDxuDS44j42TCB6U5579esbSt3Lg");
-  </script>
-</body>
-</html>
+<!DOCTYPE html><html><head><title>Coqnet Validator Haritası</title>
+<link rel='stylesheet' href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css' />
+<script src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'></script>
+<style>#map { height: 600px; }</style></head><body><div id='map'></div>
+<script>
+var greenIcon = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    shadowSize: [41, 41],
+    shadowAnchor: [12, 41]
+});
+var redIcon = L.icon({
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+    shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    shadowSize: [41, 41],
+    shadowAnchor: [12, 41]
+});
+var map = L.map('map').setView([0, 0], 2);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '© OpenStreetMap'}).addTo(map);
+L.marker([53.3331, -6.2489], {icon: redIcon}).addTo(map).bindPopup('NodeID-AsKn3W3HnqCN45AJ4bKwJq44C8GZSK94a<br>IP: 80.93.18.189<br>Uptime: 95.936905%');
+L.marker([60.1695, 24.9354], {icon: redIcon}).addTo(map).bindPopup('NodeID-MBPimoR4aNc5Cit8KWKLgjmSBpyPknf7h<br>IP: 95.217.141.154<br>Uptime: 99.99214%');
+L.marker([41.2563, -95.9404], {icon: redIcon}).addTo(map).bindPopup('NodeID-ASwjR8EhzMsb8BjSEMP6DVZ6MbER7zyz5<br>IP: 206.125.33.15<br>Uptime: 53.815685%');
+L.marker([53.3331, -6.2489], {icon: redIcon}).addTo(map).bindPopup('NodeID-ASm572EMBow3Z4JvKHW5Zmuyo6LLLcpA3<br>IP: 80.93.18.189<br>Uptime: 94.578476%');
+L.marker([49.4075, 11.1649], {icon: redIcon}).addTo(map).bindPopup('NodeID-JA96MnEfeiGd2xukEwQZhi728kMWpjqNa<br>IP: 5.189.161.251<br>Uptime: 29.966293%');
+L.marker([9.9333, -84.0833], {icon: redIcon}).addTo(map).bindPopup('NodeID-Asg8RkycFcEp75LU9aPsDbfq6deVyqC8F<br>IP: 190.124.251.28<br>Uptime: 66.14965%');
+L.marker([9.9333, -84.0833], {icon: redIcon}).addTo(map).bindPopup('NodeID-aSdZzz8RMPYDoGtKYbtCXaWKT2eusnTg<br>IP: 190.124.251.28<br>Uptime: 97.210655%');
+L.marker([49.7146, -1.9198], {icon: redIcon}).addTo(map).bindPopup('NodeID-Ro9fSEw69wts4Yz2xmHb8npBFEvVTFXq<br>IP: 51.91.72.30<br>Uptime: 98.15576%');
+L.marker([50.1155, 8.6842], {icon: redIcon}).addTo(map).bindPopup('NodeID-ZBxHxkiBQaJk67G9cFZR2uK4o87zMVzj<br>IP: 95.111.238.166<br>Uptime: 96.212326%');
+L.marker([41.2563, -95.9404], {icon: redIcon}).addTo(map).bindPopup('NodeID-ASdSXvFvJfLVXHq2LcDCbA2Dxy16bHNqR<br>IP: 206.125.33.15<br>Uptime: 90.28532%');
+</script></body></html>
